@@ -7,6 +7,9 @@ body {
     color: #FFEE44;
     font-family: "Stoke", "Lucida Bright", "Liberation", serif;
     font-size: 16px;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
 }
 
 /* Links */
@@ -25,21 +28,42 @@ ol, ul {
 }
 
 /* CSS Estrutural */
+.page-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 header {
     display: block;
-    margin-bottom: 1px;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    text-align: center;
 }
 
 nav {
     display: block;
     width: 20%;
-    float: left;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+main {
+    display: block;
+    width: 75%;
+    box-sizing: border-box;
 }
 
 section {
     display: block;
-    width: 70%;
-    float: right;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 /* Classes específicas */
@@ -129,44 +153,150 @@ nav ul {
 }
 
 /* Classes para Pedidos.html */
+
+/* Estilos para formulário responsivo */
+.pedidos-form {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.pedidos-form fieldset {
+    margin-bottom: 20px;
+    border: 2px solid #FFEE44;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.pedidos-form legend {
+    color: #FFEE44;
+    font-weight: bold;
+    padding: 0 10px;
+}
+
 .divCompras {
-    width: 550px;
+    width: 100%;
+    max-width: 550px;
     color: #000000;
     background-color: #FFFFCC;
-    padding: 6px 6px 15px 6px;
-    font-size: 12px;
+    padding: 15px;
+    font-size: 14px;
     margin: 20px auto;
     border: 2px solid #000000;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
 .listaCompras {
-    width: 210px;
-    height: 180px;
-    float: right;
-    margin-top: 2px;
-    margin-left: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+    clear: both;
+    overflow: hidden;
+}
+
+.produto-row {
+    margin-bottom: 15px;
+}
+
+.produto-selecao {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 5px;
+    gap: 10px;
+}
+
+.produto-select {
+    flex: 1;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.cliente-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+
+.form-group.half {
+    width: 50%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+
+.qtd-input {
+    width: 80px;
+}
+
+.valor-total {
+    width: 150px;
+    font-weight: bold;
+    background-color: #f9f9f9;
 }
 
 .colLabSelProd {
-    width: 230px;
-    height: 40px;
-    float: left;
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
 .colSelProd {
-    width: 160px;
-    float: right;
+    width: 100%;
+    margin-bottom: 15px;
 }
 
 .linhaProdSel {
-    width: 220px;
-    margin-bottom: 6px;
-    float: left;
+    width: 100%;
+    margin-bottom: 15px;
+    clear: both;
 }
 
 /* Elementos de entrada */
+.pedidos-form input[type="text"],
+.pedidos-form input[type="email"],
+.pedidos-form input[type="tel"],
+.pedidos-form select,
+.pedidos-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #333;
+}
+
+.pedidos-form input[type="number"] {
+    width: 80px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
 .inpGrande {
-    width: 380px;
+    width: 100%;
+    max-width: 380px;
 }
 
 .impMedio {
@@ -242,7 +372,59 @@ nav ul {
 }
 
 /* Estilos adicionais para compatibilidade */
+
+/* Media queries para responsividade */
+@media screen and (max-width: 768px) {
+    .page-container {
+        flex-direction: column;
+    }
+
+    nav, main {
+        width: 100%;
+        float: none;
+        padding-right: 0;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-group.half {
+        width: 100%;
+        padding: 0;
+    }
+
+    .radio-options {
+        flex-direction: column;
+    }
+
+    .produto-selecao {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .produto-select {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .qtd-input {
+        width: 100%;
+    }
+
+    .pedidos-form fieldset {
+        padding: 10px;
+    }
+
+    .valor-total {
+        width: 100%;
+    }
+
+    .form-actions button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
 hr {
     width: 320px;
 }
-
