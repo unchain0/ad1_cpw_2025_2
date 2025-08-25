@@ -1,0 +1,372 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,400;0,600;0,700;1,400&family=Stoke:wght@300;400&display=swap');
+
+/* CSS Custom Properties for Color Scheme */
+:root {
+    --color-primary: #2277DD;
+    --color-text: #FFEE44;
+    --color-link: #FFEE55;
+    --color-visited: #FFEE33;
+    --color-background: #2277DD;
+    --color-list-bg: #EEEEBB;
+    --color-list-text: #202020;
+    --color-table-bg: #FFFFCC;
+    --color-table-text: #000000;
+    --color-table-header: #666666;
+    --color-table-header-alt: #AAAAAA;
+
+    /* Font Stacks */
+    --font-menu: "Karla", "Verdana", "Ubuntu", sans-serif;
+    --font-main: "Stoke", "Lucida Bright", "Liberation", serif;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-main);
+    line-height: 1.6;
+}
+
+/* Page Container Layout */
+.page-container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "nav main aside"
+        "nav main aside";
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: auto 1fr;
+    min-height: 100vh;
+}
+
+header {
+    grid-area: header;
+    padding: 20px;
+    text-align: center;
+}
+
+.menu-nav {
+    grid-area: nav;
+    padding: 20px;
+    font-family: var(--font-menu);
+}
+
+main {
+    grid-area: main;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.contact-info {
+    grid-area: aside;
+    padding: 20px;
+    font-family: var(--font-menu);
+}
+
+/* Typography */
+.logo h1 {
+    font-family: var(--font-main);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.address, .contact-info {
+    font-family: var(--font-menu);
+}
+
+/* Navigation Styles */
+.menu-nav ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.menu-nav li {
+    margin-bottom: 8px;
+}
+
+a {
+    color: var(--color-link);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:visited {
+    color: var(--color-visited);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* HR Styling */
+hr {
+    width: 320px;
+    height: 2px;
+    background-color: var(--color-text);
+    border: none;
+    margin: 20px 0;
+}
+
+/* Materials List Styling */
+.listaMat {
+    width: 340px;
+    background-color: var(--color-list-bg);
+    color: var(--color-list-text);
+    border: 3px solid var(--color-list-text);
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.titulo {
+    color: var(--color-list-text);
+    font-family: var(--font-main);
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.listaMat ol {
+    margin-left: 1.5rem;
+}
+
+.listaMat ol ol {
+    list-style-type: lower-alpha;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+}
+
+.preco {
+    font-weight: bold;
+    color: #c41e3a;
+}
+
+/* Table Styling for Acabamentos */
+.tabAcab {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    background-color: var(--color-table-bg);
+    color: var(--color-table-text);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.linTH {
+    background-color: var(--color-table-header);
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.colTH {
+    background-color: var(--color-table-header-alt);
+    color: #ffffff;
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.tabAcab td {
+    padding: 10px;
+    border: 1px solid #cccccc;
+    text-align: center;
+}
+
+.imgAcab {
+    text-align: center;
+    padding: 8px;
+}
+
+.imgAcab img {
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+/* Forms Styling */
+.pedidos-form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+fieldset {
+    border: 2px solid var(--color-text);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+legend {
+    font-family: var(--font-menu);
+    font-weight: bold;
+    padding: 0 10px;
+    color: var(--color-text);
+    font-size: 1.1rem;
+}
+
+.divCompras {
+    background-color: rgba(238, 238, 187, 0.2);
+}
+
+.listaCompras {
+    display: grid;
+    grid-template-columns: 150px 200px 80px;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.colLabSelProd {
+    font-family: var(--font-menu);
+    font-weight: bold;
+    color: var(--color-text);
+}
+
+.cliente-info,
+.pagamento-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.cliente-info label,
+.pagamento-info label {
+    font-family: var(--font-menu);
+    font-weight: bold;
+    color: var(--color-text);
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #cccccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: var(--font-main);
+    background-color: #ffffff;
+    color: #333333;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color-link);
+    box-shadow: 0 0 5px rgba(255, 238, 68, 0.5);
+}
+
+/* Radio buttons and checkboxes */
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+}
+
+.pagamento-info label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Readonly textarea */
+.resumo-pedido {
+    width: 100%;
+    height: 200px;
+    background-color: #f8f9fa;
+    border: 2px solid #e1e8ed;
+    font-family: monospace;
+    font-size: 0.9rem;
+    resize: vertical;
+}
+
+/* Form Actions */
+.form-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+button {
+    background: linear-gradient(135deg, var(--color-link), #e6d000);
+    color: var(--color-list-text);
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: var(--font-menu);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 238, 68, 0.4);
+}
+
+button[type="reset"] {
+    background: linear-gradient(135deg, #6c757d, #545b62);
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .page-container {
+        grid-template-areas:
+            "header"
+            "nav"
+            "main"
+            "aside";
+        grid-template-columns: 1fr;
+    }
+
+    .menu-nav,
+    .contact-info {
+        text-align: center;
+    }
+
+    .listaMat {
+        width: 90%;
+        max-width: 340px;
+    }
+}
+
+@media (max-width: 768px) {
+    .listaCompras {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    button {
+        width: 200px;
+    }
+
+    .tabAcab {
+        font-size: 0.9rem;
+    }
+
+    .tabAcab td,
+    .colTH {
+        padding: 8px;
+    }
+}

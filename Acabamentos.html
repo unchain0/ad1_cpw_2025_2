@@ -1,61 +1,115 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Chique Elétrico - Acabamentos</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Acabamentos - Chique Elétrico</title>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;600;700&family=Stoke:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Cabeçalho -->
-    <header>
-        <div class="imgLogo">
-            <img src="images/logo_topo.png" alt="Logo Chique Elétrico" style="max-width:100%; height:auto;">
-        </div>
-        <div class="ender">
-            Av. Elétrica, 1254<br>
-            T: (21) 1254-5678<br>
-            contato@chiqueeletrico.com.br
-        </div>
-    </header>
+    <div class="page-container">
+        <header>
+            <div class="logo">
+                <h1>CHIQUE ELÉTRICO</h1>
+                <p>Materiais Elétricos de Qualidade</p>
+            </div>
+        </header>
 
-    <!-- Navegação -->
-    <nav>
-        <ul>
-            <li><a href="index.html" target="_blank">Página Principal</a></li>
-            <li><a href="Materiais.html" target="_blank">Materiais</a></li>
-            <li><a href="Acabamentos.html" target="_blank">Acabamentos</a></li>
-            <li><a href="Pedidos.html" target="_blank">Pedidos</a></li>
-        </ul>
-    </nav>
+        <nav class="menu-nav">
+            <h3>Menu</h3>
+            <ul>
+                <li><a href="ChiqueEletrico.html">Início</a></li>
+                <li><a href="Materiais.html">Materiais</a></li>
+                <li><a href="Acabamentos.html">Acabamentos</a></li>
+                <li><a href="Pedidos.html">Pedidos</a></li>
+                <li><a href="Page2.html">Sobre Nós</a></li>
+            </ul>
+            <hr>
+            <div class="address">
+                <h4>Endereço</h4>
+                <p>Rua das Instalações, 123<br>
+                Bairro Elétrico<br>
+                São Paulo - SP<br>
+                CEP: 01234-567</p>
+            </div>
+        </nav>
 
-    <!-- Conteúdo de acabamentos -->
-    <section>
-        <h1 class="titulo">Acabamentos</h1>
-        <table class="tabAcab">
-            <tr class="linTH">
-                <th colspan="3">Produtos e Detalhes</th>
-            </tr>
-            <tr>
-                <th class="colTH">Produto</th>
-                <th class="colTH">Descrição</th>
-                <th class="colTH">Imagem</th>
-            </tr>
-            <tr>
-                <th>Interruptor Simples</th>
-                <td>Interruptor de luz simples.</td>
-                <td><img src="images/switch.png" class="imgAcab" alt="Interruptor"></td>
-            </tr>
-            <tr>
-                <th>Tomada Dupla</th>
-                <td>Tomada dupla 10A.</td>
-                <td><img src="images/outlet.png" class="imgAcab" alt="Tomada"></td>
-            </tr>
-            <tr>
-                <th>Conjunto Tomada/Interruptor</th>
-                <td>Conjunto com tomada e interruptor no mesmo módulo.</td>
-                <td><img src="images/switch.png" class="imgAcab" alt="Conjunto"></td>
-            </tr>
-        </table>
-    </section>
+        <main>
+            <h2>Acabamentos Elétricos</h2>
+            <table class="tabAcab">
+                <thead>
+                    <tr class="linTH">
+                        <th class="colTH">Categoria</th>
+                        <th class="colTH">Produto</th>
+                        <th class="colTH">Imagem</th>
+                        <th class="colTH">Preço</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="3">Interruptores</td>
+                        <td>Interruptor Simples</td>
+                        <td class="imgAcab">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNDQiIHZpZXdCb3g9IjAgMCA2MCA0NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjQ0IiBmaWxsPSIjZjBmMGYwIiBzdHJva2U9IiNjY2MiLz4KPHRleHQgeD0iNSIgeT0iMjUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzMzMyI+SW50ZXJydXB0b3I8L3RleHQ+Cjwvc3ZnPg==" alt="Interruptor Simples" width="60" height="44">
+                        </td>
+                        <td>R$ 15,90</td>
+                    </tr>
+                    <tr>
+                        <td>Interruptor Duplo</td>
+                        <td class="imgAcab">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNDQiIHZpZXdCb3g9IjAgMCA2MCA0NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjQ0IiBmaWxsPSIjZjBmMGYwIiBzdHJva2U9IiNjY2MiLz4KPHRleHQgeD0iMTAiIHk9IjI1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IiMzMzMiPkR1cGxvPC90ZXh0Pgo8L3N2Zz4=" alt="Interruptor Duplo" width="60" height="44">
+                        </td>
+                        <td>R$ 28,90</td>
+                    </tr>
+                    <tr>
+                        <td>Interruptor Three-Way</td>
+                        <td class="imgAcab">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNDQiIHZpZXdCb3g9IjAgMCA2MCA0NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjQ0IiBmaWxsPSIjZjBmMGYwIiBzdHJva2U9IiNjY2MiLz4KPHRleHQgeD0iNSIgeT0iMjUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI5IiBmaWxsPSIjMzMzIj5UaHJlZS1XYXk8L3RleHQ+Cjwvc3ZnPg==" alt="Interruptor Three-Way" width="60" height="44">
+                        </td>
+                        <td>R$ 35,90</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Tomadas</td>
+                        <td>Tomada 2P+T 10A</td>
+                        <td class="imgAcab">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNDQiIHZpZXdCb3g9IjAgMCA2MCA0NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjQ0IiBmaWxsPSIjZjBmMGYwIiBzdHJva2U9IiNjY2MiLz4KPHRleHQgeD0iMTAiIHk9IjI1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IiMzMzMiPlRvbWFkYTwvdGV4dD4KPC9zdmc+" alt="Tomada 10A" width="60" height="44">
+                        </td>
+                        <td>R$ 18,90</td>
+                    </tr>
+                    <tr>
+                        <td>Tomada 2P+T 20A</td>
+                        <td class="imgAcab">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNDQiIHZpZXdCb3g9IjAgMCA2MCA0NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjQ0IiBmaWxsPSIjZjBmMGYwIiBzdHJva2U9IiNjY2MiLz4KPHRleHQgeD0iOCIgeT0iMjUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI5IiBmaWxsPSIjMzMzIj5Ub21hZGEgMjBBPC90ZXh0Pgo8L3N2Zz4=" alt="Tomada 20A" width="60" height="44">
+                        </td>
+                        <td>R$ 25,90</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="linTH">Espelhos e Placas</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Espelhos</td>
+                        <td>Espelho 4x2</td>
+                        <td class="imgAcab">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNDQiIHZpZXdCb3g9IjAgMCA2MCA0NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjQ0IiBmaWxsPSIjZjBmMGYwIiBzdHJva2U9IiNjY2MiLz4KPHRleHQgeD0iMTAiIHk9IjI1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTAiIGZpbGw9IiMzMzMiPkVzcGVsaG88L3RleHQ+Cjwvc3ZnPg==" alt="Espelho 4x2" width="60" height="44">
+                        </td>
+                        <td>R$ 8,90</td>
+                    </tr>
+                    <tr>
+                        <td>Espelho 4x4</td>
+                        <td class="imgAcab">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNDQiIHZpZXdCb3g9IjAgMCA2MCA0NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjQ0IiBmaWxsPSIjZjBmMGYwIiBzdHJva2U9IiNjY2MiLz4KPHRleHQgeD0iOCIgeT0iMjUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI5IiBmaWxsPSIjMzMzIj5Fc3BlbGhvIDR4NDwvdGV4dD4KPC9zdmc+" alt="Espelho 4x4" width="60" height="44">
+                        </td>
+                        <td>R$ 12,90</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+
+        <aside class="contact-info">
+            <h4>Contato</h4>
+            <p>Telefone: (11) 1234-5678<br>
+            Email: contato@chiqueeletrico.com.br</p>
+        </aside>
+    </div>
 </body>
 </html>

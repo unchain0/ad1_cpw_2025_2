@@ -1,44 +1,94 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Chique Elétrico - Materiais</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Materiais - Chique Elétrico</title>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;600;700&family=Stoke:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Cabeçalho -->
-    <header>
-        <div class="imgLogo">
-            <img src="images/logo_topo.png" alt="Logo Chique Elétrico" style="max-width:100%; height:auto;">
-        </div>
-        <div class="ender">
-            Av. Elétrica, 1254<br>
-            T: (21) 1254-5678<br>
-            contato@chiqueeletrico.com.br
-        </div>
-    </header>
+    <div class="page-container">
+        <header>
+            <div class="logo">
+                <h1>CHIQUE ELÉTRICO</h1>
+                <p>Materiais Elétricos de Qualidade</p>
+            </div>
+        </header>
 
-    <!-- Navegação -->
-    <nav>
-        <ul>
-            <li><a href="index.html" target="_blank">Página Principal</a></li>
-            <li><a href="Materiais.html" target="_blank">Materiais</a></li>
-            <li><a href="Acabamentos.html" target="_blank">Acabamentos</a></li>
-            <li><a href="Pedidos.html" target="_blank">Pedidos</a></li>
-        </ul>
-    </nav>
+        <nav class="menu-nav">
+            <h3>Menu</h3>
+            <ul>
+                <li><a href="ChiqueEletrico.html">Início</a></li>
+                <li><a href="Materiais.html">Materiais</a></li>
+                <li><a href="Acabamentos.html">Acabamentos</a></li>
+                <li><a href="Pedidos.html">Pedidos</a></li>
+                <li><a href="Page2.html">Sobre Nós</a></li>
+            </ul>
+            <hr>
+            <div class="address">
+                <h4>Endereço</h4>
+                <p>Rua das Instalações, 123<br>
+                Bairro Elétrico<br>
+                São Paulo - SP<br>
+                CEP: 01234-567</p>
+            </div>
+        </nav>
 
-    <!-- Conteúdo dos materiais -->
-    <section>
-        <h1 class="titulo">Materiais Elétricos</h1>
-        <div class="listaMat">
-            <ol>
-                <li>Cabos <span class="preco">R$ 10,00</span></li>
-                <li>Interruptores <span class="preco">R$ 15,00</span></li>
-                <li>Tomadas <span class="preco">R$ 20,00</span></li>
-                <li>Lâmpadas LED <span class="preco">R$ 5,00</span></li>
-            </ol>
-        </div>
-    </section>
+        <main>
+            <div class="listaMat">
+                <h2 class="titulo">Fios e Cabos Elétricos</h2>
+                <ol>
+                    <li>Cabo Flexível 2.5mm²
+                        <ol type="a">
+                            <li>Rolo 100m - <span class="preco">R$ 89,90</span></li>
+                            <li>Rolo 50m - <span class="preco">R$ 45,90</span></li>
+                        </ol>
+                    </li>
+                    <li>Cabo Flexível 4.0mm²
+                        <ol type="a">
+                            <li>Rolo 100m - <span class="preco">R$ 125,90</span></li>
+                            <li>Rolo 50m - <span class="preco">R$ 63,90</span></li>
+                        </ol>
+                    </li>
+                    <li>Cabo Flexível 6.0mm²
+                        <ol type="a">
+                            <li>Rolo 100m - <span class="preco">R$ 189,90</span></li>
+                            <li>Rolo 50m - <span class="preco">R$ 95,90</span></li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="listaMat">
+                <h2 class="titulo">Disjuntores e Proteção</h2>
+                <ol>
+                    <li>Disjuntor Monopolar 10A
+                        <ol type="a">
+                            <li>Unitário - <span class="preco">R$ 12,50</span></li>
+                            <li>Kit 10 unidades - <span class="preco">R$ 110,00</span></li>
+                        </ol>
+                    </li>
+                    <li>Disjuntor Bipolar 25A
+                        <ol type="a">
+                            <li>Unitário - <span class="preco">R$ 28,90</span></li>
+                            <li>Kit 5 unidades - <span class="preco">R$ 135,00</span></li>
+                        </ol>
+                    </li>
+                    <li>DR Residual 40A
+                        <ol type="a">
+                            <li>Unitário - <span class="preco">R$ 89,90</span></li>
+                            <li>Kit 3 unidades - <span class="preco">R$ 249,00</span></li>
+                        </ol>
+                    </li>
+                </ol>
+            </div>
+        </main>
+
+        <aside class="contact-info">
+            <h4>Contato</h4>
+            <p>Telefone: (11) 1234-5678<br>
+            Email: contato@chiqueeletrico.com.br</p>
+        </aside>
+    </div>
 </body>
 </html>
