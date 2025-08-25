@@ -1,372 +1,248 @@
 /* Google Fonts Import */
-@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,400;0,600;0,700;1,400&family=Stoke:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;600;700&family=Stoke:wght@300;400&display=swap');
 
-/* CSS Custom Properties for Color Scheme */
-:root {
-    --color-primary: #2277DD;
-    --color-text: #FFEE44;
-    --color-link: #FFEE55;
-    --color-visited: #FFEE33;
-    --color-background: #2277DD;
-    --color-list-bg: #EEEEBB;
-    --color-list-text: #202020;
-    --color-table-bg: #FFFFCC;
-    --color-table-text: #000000;
-    --color-table-header: #666666;
-    --color-table-header-alt: #AAAAAA;
-
-    /* Font Stacks */
-    --font-menu: "Karla", "Verdana", "Ubuntu", sans-serif;
-    --font-main: "Stoke", "Lucida Bright", "Liberation", serif;
-}
-
-/* Reset and Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Base Styles */
 body {
-    background-color: var(--color-background);
-    color: var(--color-text);
-    font-family: var(--font-main);
-    line-height: 1.6;
+    background-color: #2277DD;
+    color: #FFEE44;
+    font-family: "Stoke", "Lucida Bright", "Liberation", serif;
+    font-size: 16px;
 }
 
-/* Page Container Layout */
-.page-container {
-    display: grid;
-    grid-template-areas:
-        "header header header"
-        "nav main aside"
-        "nav main aside";
-    grid-template-columns: 200px 1fr 200px;
-    grid-template-rows: auto 1fr;
-    min-height: 100vh;
-}
-
-header {
-    grid-area: header;
-    padding: 20px;
-    text-align: center;
-}
-
-.menu-nav {
-    grid-area: nav;
-    padding: 20px;
-    font-family: var(--font-menu);
-}
-
-main {
-    grid-area: main;
-    padding: 20px;
-    overflow-y: auto;
-}
-
-.contact-info {
-    grid-area: aside;
-    padding: 20px;
-    font-family: var(--font-menu);
-}
-
-/* Typography */
-.logo h1 {
-    font-family: var(--font-main);
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.address, .contact-info {
-    font-family: var(--font-menu);
-}
-
-/* Navigation Styles */
-.menu-nav ul {
-    list-style-type: square;
-    padding-left: 20px;
-}
-
-.menu-nav li {
-    margin-bottom: 8px;
-}
-
+/* Links */
 a {
-    color: var(--color-link);
+    color: #FFEE55;
     text-decoration: none;
-    transition: color 0.3s ease;
 }
 
 a:visited {
-    color: var(--color-visited);
+    color: #FFEE33;
 }
 
-a:hover {
-    text-decoration: underline;
+/* Lists */
+ol, ul {
+    line-height: 200%;
 }
 
-/* HR Styling */
-hr {
-    width: 320px;
-    height: 2px;
-    background-color: var(--color-text);
-    border: none;
-    margin: 20px 0;
+/* CSS Estrutural */
+header {
+    display: block;
+    margin-bottom: 1px;
 }
 
-/* Materials List Styling */
+nav {
+    display: block;
+    width: 20%;
+    float: left;
+}
+
+section {
+    display: block;
+    width: 70%;
+    float: right;
+}
+
+/* Classes específicas */
+.ender {
+    float: right;
+    text-align: right;
+    line-height: 140%;
+    font-size: 14px;
+    font-family: "Karla", "Verdana", "Ubuntu", sans-serif;
+}
+
+.imgLogo {
+    border-bottom: 3px solid #FFFFFF;
+    margin-bottom: 6px;
+    padding-bottom: 10px;
+}
+
+.apres {
+    text-align: center;
+    font-size: 16px;
+}
+
+nav ul {
+    color: #FFEE44;
+    line-height: 230%;
+    margin-top: 40px;
+    list-style: square;
+}
+
+/* Classes para Materiais.html */
+.titulo {
+    text-align: center;
+}
+
 .listaMat {
     width: 340px;
-    background-color: var(--color-list-bg);
-    color: var(--color-list-text);
-    border: 3px solid var(--color-list-text);
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-.titulo {
-    color: var(--color-list-text);
-    font-family: var(--font-main);
-    text-align: center;
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
-}
-
-.listaMat ol {
-    margin-left: 1.5rem;
-}
-
-.listaMat ol ol {
-    list-style-type: lower-alpha;
-    margin-top: 0.5rem;
-    margin-left: 1rem;
+    color: #202020;
+    background-color: #EEEEBB;
+    padding: 10px 10px 10px 30px;
+    border: 3px solid #202020;
+    margin: 0px 10px;
+    margin-left: auto;
+    margin-right: auto;
+    list-style: square;
 }
 
 .preco {
-    font-weight: bold;
-    color: #c41e3a;
+    color: #CC0000;
 }
 
-/* Table Styling for Acabamentos */
+.listaMat ol {
+    color: #202020;
+    list-style-type: lower-alpha;
+}
+
+/* Classes para Acabamentos.html */
 .tabAcab {
-    width: 100%;
     border-collapse: collapse;
-    margin: 2rem 0;
-    background-color: var(--color-table-bg);
-    color: var(--color-table-text);
-    border-radius: 8px;
-    overflow: hidden;
+    margin-top: 6px;
+    font-size: 15px;
+    background-color: #FFFFCC;
+    color: #000000;
+    font-family: "Karla", "Verdana", "Ubuntu", sans-serif;
+}
+
+.tabAcab th, .tabAcab td {
+    border: 2px solid #000000;
+    padding: 6px 12px;
 }
 
 .linTH {
-    background-color: var(--color-table-header);
-    color: #ffffff;
-    font-weight: bold;
+    color: #EEEE00;
+    background-color: #666666;
+    vertical-align: middle;
+    text-align: center;
 }
 
 .colTH {
-    background-color: var(--color-table-header-alt);
-    color: #ffffff;
-    padding: 12px;
-    text-align: center;
-    font-weight: bold;
-}
-
-.tabAcab td {
-    padding: 10px;
-    border: 1px solid #cccccc;
-    text-align: center;
+    color: #000000;
+    background-color: #AAAAAA;
+    text-align: left;
 }
 
 .imgAcab {
-    text-align: center;
-    padding: 8px;
+    width: 60px;
+    height: 44px;
 }
 
-.imgAcab img {
-    border: 1px solid #cccccc;
-    border-radius: 4px;
-}
-
-/* Forms Styling */
-.pedidos-form {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-fieldset {
-    border: 2px solid var(--color-text);
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 20px;
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-legend {
-    font-family: var(--font-menu);
-    font-weight: bold;
-    padding: 0 10px;
-    color: var(--color-text);
-    font-size: 1.1rem;
-}
-
+/* Classes para Pedidos.html */
 .divCompras {
-    background-color: rgba(238, 238, 187, 0.2);
+    width: 550px;
+    color: #000000;
+    background-color: #FFFFCC;
+    padding: 6px 6px 15px 6px;
+    font-size: 12px;
+    margin: 20px auto;
+    border: 2px solid #000000;
 }
 
 .listaCompras {
-    display: grid;
-    grid-template-columns: 150px 200px 80px;
-    gap: 15px;
-    align-items: center;
-    margin-bottom: 15px;
+    width: 210px;
+    height: 180px;
+    float: right;
+    margin-top: 2px;
+    margin-left: 10px;
 }
 
 .colLabSelProd {
-    font-family: var(--font-menu);
-    font-weight: bold;
-    color: var(--color-text);
+    width: 230px;
+    height: 40px;
+    float: left;
 }
 
-.cliente-info,
-.pagamento-info {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
+.colSelProd {
+    width: 160px;
+    float: right;
 }
 
-.cliente-info label,
-.pagamento-info label {
-    font-family: var(--font-menu);
-    font-weight: bold;
-    color: var(--color-text);
-    margin-bottom: 5px;
+.linhaProdSel {
+    width: 220px;
+    margin-bottom: 6px;
+    float: left;
+}
+
+/* Elementos de entrada */
+.inpGrande {
+    width: 380px;
+}
+
+.impMedio {
+    width: 80px;
+}
+
+.impNCC {
+    width: 130px;
+}
+
+.impTelef {
+    width: 90px;
+}
+
+.impEnder {
+    width: 180px;
+    height: 50px;
+}
+
+.numDD {
+    width: 30px;
+}
+
+.numQD {
+    width: 50px;
+}
+
+/* Posicionamento */
+.elemEsq {
     display: block;
+    float: left;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="number"],
-select,
-textarea {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #cccccc;
-    border-radius: 4px;
-    font-size: 1rem;
-    font-family: var(--font-main);
-    background-color: #ffffff;
-    color: #333333;
+.elemDir {
+    display: block;
+    float: right;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
-    outline: none;
-    border-color: var(--color-link);
-    box-shadow: 0 0 5px rgba(255, 238, 68, 0.5);
+.fsEsq {
+    float: left;
+    display: inline;
+    margin: 0px;
 }
 
-/* Radio buttons and checkboxes */
-input[type="radio"],
-input[type="checkbox"] {
-    width: auto;
-    margin-right: 8px;
+.fsDir {
+    float: right;
+    display: inline;
+    margin: 0px;
 }
 
-.pagamento-info label {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
+.botoes {
+    text-align: right;
+    margin: 20px 10px 0px 10px;
 }
 
-/* Readonly textarea */
-.resumo-pedido {
-    width: 100%;
-    height: 200px;
-    background-color: #f8f9fa;
-    border: 2px solid #e1e8ed;
-    font-family: monospace;
-    font-size: 0.9rem;
-    resize: vertical;
+/* Labels específicos */
+.colPri {
+    float: left;
+    display: block;
+    width: 90px;
 }
 
-/* Form Actions */
-.form-actions {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    margin-top: 30px;
+.colPriCompras {
+    float: left;
+    display: block;
+    width: 86px;
 }
 
-button {
-    background: linear-gradient(135deg, var(--color-link), #e6d000);
-    color: var(--color-list-text);
-    border: none;
-    padding: 12px 24px;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-family: var(--font-menu);
+.colPriPag {
+    float: left;
+    display: block;
+    width: 250px;
 }
 
-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 238, 68, 0.4);
+/* Estilos adicionais para compatibilidade */
+hr {
+    width: 320px;
 }
 
-button[type="reset"] {
-    background: linear-gradient(135deg, #6c757d, #545b62);
-    color: #ffffff;
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .page-container {
-        grid-template-areas:
-            "header"
-            "nav"
-            "main"
-            "aside";
-        grid-template-columns: 1fr;
-    }
-
-    .menu-nav,
-    .contact-info {
-        text-align: center;
-    }
-
-    .listaMat {
-        width: 90%;
-        max-width: 340px;
-    }
-}
-
-@media (max-width: 768px) {
-    .listaCompras {
-        grid-template-columns: 1fr;
-        text-align: left;
-    }
-
-    .form-actions {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    button {
-        width: 200px;
-    }
-
-    .tabAcab {
-        font-size: 0.9rem;
-    }
-
-    .tabAcab td,
-    .colTH {
-        padding: 8px;
-    }
-}
